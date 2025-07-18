@@ -1,0 +1,6 @@
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE parking_sessions;
+TRUNCATE TABLE parkingspots;
+TRUNCATE TABLE reservations;
+TRUNCATE TABLE subscribers;
+SET FOREIGN_KEY_CHECKS = 1;

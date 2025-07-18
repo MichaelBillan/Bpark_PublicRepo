@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="250.0" prefWidth="300.0" stylesheets="@/bparkClient/style/serverIP.css"
+      xmlns="http://javafx.com/javafx/21.0.7" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="bparkClient.gui.ServerIpController">
+
+   <children>
+      <Label layoutX="85.0" layoutY="30.0" text="Enter server IP">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+
+      <TextField fx:id="txtIP" layoutX="50.0" layoutY="70.0" prefWidth="200.0" promptText="e.g. 127.0.0.1"/>
+
+      <Label layoutX="100.0" layoutY="110.0" text="Enter Port">
+         <font>
+            <Font size="14.0"/>
+         </font>
+      </Label>
+
+      <TextField fx:id="txtPort" layoutX="50.0" layoutY="140.0" prefWidth="200.0" promptText="e.g. 5555"/>
+
+      <Button fx:id="btnIP" layoutX="110.0" layoutY="190.0" mnemonicParsing="false" onAction="#getIP" text="Submit" />
+   </children>
+</Pane>

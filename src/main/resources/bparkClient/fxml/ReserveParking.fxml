@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:controller="bparkClient.gui.ReserveParkingController"
+           xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="480" prefHeight="650"
+           stylesheets="@/bparkClient/style/placeCarOnConvey.css">
+
+    <!-- שכבת תוכן ראשית -->
+    <VBox fx:id="mainContent"
+          alignment="CENTER"
+          spacing="20"
+          StackPane.alignment="CENTER"
+          maxWidth="350">
+        <Label text="Reserve Parking" styleClass="text-title"/>
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" minWidth="90" prefWidth="90"/>
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="Date:" styleClass="label-subtitle" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <DatePicker fx:id="datepickerreserveparking"
+                        GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="250"/>
+
+            <Label text="Entry Time:" styleClass="label-subtitle" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="entryTimereserveField"
+                       promptText="HH:MM"
+                       styleClass="text-field"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"
+                       prefWidth="50"/>
+
+            <Label text="Exit Time:" styleClass="label-subtitle" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="exitTimereserveField"
+                       promptText="HH:MM"
+                       styleClass="text-field"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2"
+                       prefWidth="50"/>
+
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints/>
+                <RowConstraints/>
+            </rowConstraints>
+        </GridPane>
+
+        <HBox alignment="CENTER">
+            <Button fx:id="confirmreserveparkingbtn"
+                    onAction="#handleconfirmreserveparkingbtn"
+                    text="Confirm"
+                    styleClass="button-blue"/>
+        </HBox>
+    </VBox>
+
+    <!-- כפתורי חזור ובית למעלה -->
+    <HBox alignment="TOP_LEFT"
+          StackPane.alignment="TOP_LEFT"
+          spacing="10"
+          mouseTransparent="false"
+          pickOnBounds="false">
+        <padding>
+            <Insets top="70" left="20"/>
+        </padding>
+
+        <Button fx:id="backsubscribermenuweb"
+                onAction="#handlebacksubscribermenuweb"
+                prefHeight="30" prefWidth="70"
+                text="Back"
+                styleClass="back-button"/>
+
+        <Button fx:id="homeBtn"
+                onAction="#handleHome"
+                prefHeight="30" prefWidth="90"
+                text="Home"
+                styleClass="back-button"/>
+    </HBox>
+
+    <!-- שכבת טעינה -->
+    <VBox fx:id="loadingOverlay"
+          visible="false"
+          alignment="CENTER"
+          StackPane.alignment="CENTER"
+          style="-fx-background-color: rgba(0, 0, 0, 0.3);"
+          mouseTransparent="false">
+        <ProgressIndicator />
+    </VBox>
+
+</StackPane>

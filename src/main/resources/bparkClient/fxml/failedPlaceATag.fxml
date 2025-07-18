@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="bparkClient.gui.FailedPlaceATagController"
+           prefWidth="450" prefHeight="650"
+           stylesheets="@/bparkClient/style/failed.css"
+           styleClass="root">
+
+    <!-- שכבת תוכן מעל הרקע -->
+    <VBox alignment="TOP_CENTER" spacing="20">
+        <!-- שורת ניווט עם כפתורי חזור ובית -->
+        <HBox alignment="TOP_LEFT" spacing="10">
+            <padding>
+                <Insets top="80" left="20"/>
+            </padding>
+            <Button fx:id="backButton"
+                    text="Back"
+                    onAction="#handleBack"
+                    styleClass="back-button"/>
+            <Button fx:id="homeButton"
+                    text="Home"
+                    onAction="#handleHome"
+                    styleClass="back-button"/>
+        </HBox>
+
+        <!-- תוכן מרכזי -->
+        <VBox alignment="CENTER" spacing="15">
+            <Text text="Verification Failed!" styleClass="text-title"/>
+
+        </VBox>
+    </VBox>
+</StackPane>

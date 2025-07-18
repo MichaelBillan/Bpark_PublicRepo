@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.chart.PieChart?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="bparkClient.gui.LateParkingReportController"
+      alignment="TOP_CENTER" spacing="20" styleClass="main-bg">
+    <Label text="Late Parking Report" styleClass="text-title"/>
+    <PieChart fx:id="lateParkingPieChart" prefHeight="400" prefWidth="600"/>
+</VBox> 

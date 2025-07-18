@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER"
+      fx:controller="bparkClient.gui.RoleSelectionWebController"
+      spacing="20.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      stylesheets="@/bparkClient/style/AccessSelection.css"
+      prefWidth="450" prefHeight="650">
+
+    <padding>
+        <Insets top="70" bottom="50" left="30" right="30"/>
+    </padding>
+
+    <!-- כפתור BACK בצד שמאל למעלה -->
+    <HBox alignment="TOP_LEFT">
+        <Button fx:id="backButton"
+                text="Back"
+                onAction="#handleBack"
+                styleClass="back-button"
+                style="-fx-background-color: transparent; -fx-text-fill: #3399FF; -fx-font-size: 20px;" />
+    </HBox>
+
+    <!-- תוכן מרכזי -->
+    <Label text="Welcome!" styleClass="text-title" />
+
+    <Button fx:id="checkparkingavailabilitywebbtn"
+            onAction="#handlecheckparkingavailabilitywebbtn"
+            prefWidth="300"
+            text="Check Parking Availability"
+            styleClass="button-green" />
+
+    <Button fx:id="subscriberwebbtn"
+            onAction="#handlesubscriberwebbtn"
+            prefWidth="300"
+            text="Subscriber"
+            styleClass="button-blue" />
+
+    <Button fx:id="employeewebbtn"
+            onAction="#handleemployeewebbtn"
+            prefWidth="300"
+            text="Employee"
+            styleClass="button-green" />
+</VBox>

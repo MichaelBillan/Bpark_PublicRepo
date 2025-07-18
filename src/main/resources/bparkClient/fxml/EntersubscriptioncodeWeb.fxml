@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:controller="bparkClient.gui.EntersubscriptioncodeWebController"
+           xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           stylesheets="@/bparkClient/style/verifyViaCode.css"
+           prefWidth="400" prefHeight="650">
+
+
+    <VBox alignment="TOP_LEFT" spacing="10">
+
+        <!-- שורת כפתורי בית וחזור בצד שמאל למעלה -->
+        <HBox alignment="TOP_LEFT" spacing="10">
+            <padding>
+                <Insets top="70" left="20"/>
+            </padding>
+            <Button fx:id="backRoleSelectionWeb"
+                    onAction="#handlebackroleselectionweb"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Back"/>
+
+            <Button fx:id="homewelcomeweb"
+                    onAction="#handlehomewelcomeweb"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Home"/>
+        </HBox>
+
+        <!-- תוכן המסך המרכזי -->
+        <VBox alignment="CENTER" maxWidth="400" spacing="20">
+            <padding>
+                <Insets bottom="40" left="30" right="30" top="40"/>
+            </padding>
+
+            <Label text="Verify Your Subscription" styleClass="text-title"/>
+
+            <GridPane hgap="10" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints halignment="LEFT" hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Subscription Code:"
+                       GridPane.columnIndex="0" GridPane.rowIndex="0"
+                       styleClass="label-subtitle"/>
+
+
+                <TextField fx:id="subscriptionCodeFieldterminal"
+                           promptText="Enter code..."
+                           styleClass="text-field"
+                           GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+
+                <Label fx:id="errorLabel"
+                       id="textError1"
+                       text="Invalid code"
+                       styleClass="error-text"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </GridPane>
+
+            <Button fx:id="verifysubcodebtn"
+                    onAction="#handleverifysubcodebtn"
+                    text="Verify"
+                    styleClass="button-blue"/>
+        </VBox>
+    </VBox>
+</StackPane>

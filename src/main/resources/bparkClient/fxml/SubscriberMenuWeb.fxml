@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:controller="bparkClient.gui.SubscriberMenuWebController"
+           xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           prefWidth="450" prefHeight="650"
+           stylesheets="@/bparkClient/style/AccessSelection.css">
+
+    <VBox spacing="20" fillWidth="true">
+
+        <!-- שורת כפתורי בית וחזור בצד שמאל למעלה -->
+        <HBox alignment="TOP_LEFT" spacing="10">
+            <padding>
+                <Insets top="60" left="20"/>
+            </padding>
+            <Button fx:id="backentersubcode"
+                    onAction="#handlebackEnterSubCode"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Back"/>
+            <Button fx:id="homewelcomeweb"
+                    onAction="#handlehomewelcomeweb"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Home"/>
+        </HBox>
+
+        <!-- תוכן מרכזי נמוך יותר -->
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="60"/>
+            </padding>
+
+            <Label fx:id="welcomeLabel" text="Welcome!" styleClass="text-title"/>
+            <Label text="How can we help you today?" styleClass="text-title"/>
+
+            <Button fx:id="myprofilesubwebbtn"
+                    onAction="#handlemyprofilesubwebbtn"
+                    prefWidth="200"
+                    text="My Profile"
+                    styleClass="button-blue"/>
+
+            <Button fx:id="reserveparkingwebbtn"
+                    onAction="#handlereserveparkingwebbtn"
+                    prefWidth="200"
+                    text="Reserve Parking"
+                    styleClass="button-green"/>
+
+            <Button fx:id="extendparkingtimewebbtn"
+                    onAction="#handleextendparkingtimewebbtn"
+                    prefWidth="200"
+                    text="Extend Parking Time"
+                    styleClass="button-blue"/>
+        </VBox>
+
+    </VBox>
+</StackPane>

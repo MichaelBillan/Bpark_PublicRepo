@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="bparkClient.gui.EnterConfirmationCodeController"
+           stylesheets="@/bparkClient/style/parkingAvailability.css"
+           prefHeight="650" prefWidth="480">
+
+    <AnchorPane fx:id="mainContent">
+
+        <children>
+
+            <HBox spacing="10" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="20">
+                <Button fx:id="backdropofforpickupterminalbtn"
+                        onAction="#handlebackdropofforpickupterminalbtn"
+                        prefHeight="36" prefWidth="80"
+                        styleClass="back-button"
+                        text="Back"/>
+
+                <Button fx:id="homewelcometerminal"
+                        onAction="#handlehomewelcometerminal"
+                        prefHeight="36" prefWidth="90"
+                        styleClass="back-button"
+                        text="Home"/>
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="20.0"
+                  AnchorPane.topAnchor="100" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.bottomAnchor="50">
+                <Label text="Enter Your Confirmation Code" styleClass="text-title"/>
+
+                <TextField fx:id="confirmationCodeField"
+                           promptText="Confirmation Code"
+                           styleClass="text-field"
+                           maxWidth="220"
+                           prefWidth="100"/>
+
+                <Label fx:id="errorLabel"
+                       id="textError1"
+                       text=""
+                       style="-fx-text-fill: red;" />
+
+                <Button fx:id="confirmconfirmationcodebtn"
+                        onAction="#handleconfirmconfirmationcodebtn"
+                        prefWidth="120"
+                        text="Confirm"
+                        styleClass="button-blue"/>
+            </VBox>
+
+        </children>
+    </AnchorPane>
+
+    <!-- שכבת טעינה -->
+    <VBox fx:id="loadingOverlay"
+          alignment="CENTER"
+          spacing="10"
+          visible="false"
+          style="-fx-background-color: rgba(0,0,0,0.3);"
+          StackPane.alignment="CENTER">
+        <children>
+            <ProgressIndicator />
+            <Label text="Loading..." style="-fx-text-fill: white; -fx-font-size: 18px;" />
+        </children>
+    </VBox>
+
+</StackPane>

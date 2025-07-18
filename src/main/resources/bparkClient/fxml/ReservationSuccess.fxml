@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="bparkClient.gui.ReservationSuccessController"
+           stylesheets="@/bparkClient/style/success.css"
+           prefWidth="450" prefHeight="650">
+
+    <!-- תוכן עיקרי במרכז העמוד -->
+    <VBox alignment="TOP_CENTER"
+          spacing="20"
+          StackPane.alignment="TOP_CENTER"
+          mouseTransparent="true"> <!-- ✅ מונע חסימת כפתורים -->
+        <padding>
+            <Insets top="100" left="30" right="30"/>
+        </padding>
+
+        <Label text="Reservation Confirmed!" styleClass="text-title"/>
+        <Label fx:id="confirmationCodeLabel" text="C-XXXXXX" styleClass="label-subtitle"/>
+    </VBox>
+
+    <!-- שורת טקסט בתחתית -->
+    <Label text="We look forward to your visit. Please arrive on time."
+           styleClass="label-subtitle"
+           StackPane.alignment="BOTTOM_CENTER">
+        <padding>
+            <Insets bottom="100"/>
+        </padding>
+    </Label>
+
+    <!-- כפתורי חזור ובית למעלה משמאל - ❗ עברו לסוף כדי להיות בשכבה העליונה -->
+    <HBox alignment="TOP_LEFT"
+          StackPane.alignment="TOP_LEFT"
+          spacing="10">
+        <padding>
+            <Insets top="40" left="20"/>
+        </padding>
+
+        <Button fx:id="backreserveparking"
+                onAction="#handlebackreserveparking"
+                prefHeight="30" prefWidth="90"
+                text="Back"
+                styleClass="back-button" />
+
+        <Button fx:id="homewelcomeweb"
+                onAction="#handlehomewelcomeweb"
+                prefHeight="30" prefWidth="90"
+                text="Home"
+                styleClass="back-button" />
+    </HBox>
+
+</StackPane>

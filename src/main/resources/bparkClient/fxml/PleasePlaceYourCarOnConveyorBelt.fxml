@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@/bparkClient/style/placeCarOnConvey.css"
+            prefWidth="300" prefHeight="650"
+            fx:controller="bparkClient.gui.PlaceCarOnConveyController">  
+            <!-- fx:controller="bparkClient.gui.PickupTimeController"> --> 
+            
+     <!-- מבנה אנכי ראשי -->
+    <VBox alignment="TOP_CENTER" spacing="20" styleClass="content-box">
+
+        <!-- כפתור חזור למעלה שמאל -->
+        <HBox alignment="TOP_LEFT">
+            <padding>
+                <Insets top="30" left="20"/>
+            </padding>
+            <Button fx:id="backExtandParkingTimebtn"
+                    onAction="#handlebackExtandParkingTime"
+                    styleClass="back-button"
+                    text="Back"/>
+            <Button fx:id="homewelcometerminal"
+                    onAction="#handlehomewelcometerminal"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Home"/>
+        </HBox>
+
+        <!-- רווח כדי להוריד את התוכן למרכז -->
+        <VBox minHeight="100" />
+        
+
+    </VBox>
+    <children>
+        <Label layoutX="50" layoutY="150"
+               text="Please place your car on the conveyor belt"
+               styleClass="label-subtitle" />
+
+        <Label layoutX="50" layoutY="250.0"
+               text="Pick up time: "
+               styleClass="label-subtitle" />
+
+        <Label fx:id="lblPickupTime"
+               layoutX="170.0"
+               layoutY="250.0"
+               styleClass="label-subtitle" />
+
+        <Separator layoutX="35.0" layoutY="280.0" prefHeight="2.0" prefWidth="400" />
+
+        <Label layoutX="50" layoutY="350"
+               text="Thank you for choosing BPark"
+               styleClass="label-subtitle" />
+    </children>
+</AnchorPane>

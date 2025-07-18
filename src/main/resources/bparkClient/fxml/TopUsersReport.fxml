@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bparkClient.gui.ReportGraphsController"
+            stylesheets="@/bparkClient/style/verifyViaTag.css"
+            prefHeight="600" prefWidth="900">
+
+    <TabPane fx:id="topUsersTabPane" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20">
+        <tabs>
+            <Tab text="Top Users">
+                <content>
+                    <VBox alignment="TOP_CENTER" spacing="20.0">
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <HBox spacing="10" alignment="CENTER_RIGHT">
+                                <Button fx:id="backBtn" text="Back" styleClass="back-button" onAction="#handleBack"/>
+                                <Button fx:id="homeBtn" text="Home" styleClass="back-button" onAction="#handleHome"/>
+                            </HBox>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <Label text="Top Users Report" styleClass="text-title"/>
+                        </HBox>
+                        <BarChart fx:id="topUsersBarChart" prefHeight="350.0" prefWidth="700.0"
+                                  title="Subscribers with Most Parking Sessions"
+                                  animated="true">
+                            <xAxis>
+                                <CategoryAxis fx:id="xAxis" label="Subscriber"/>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="yAxis" label="Number of Sessions"/>
+                            </yAxis>
+                        </BarChart>
+                        <HBox alignment="CENTER" spacing="10">
+                            <Label text="Month:" styleClass="text-subtitle" style="-fx-font-size: 18px;"/>
+                            <ComboBox fx:id="monthComboBox" promptText="Month" styleClass="combo-green"/>
+                            <Label text="Year:" styleClass="text-subtitle" style="-fx-font-size: 18px;"/>
+                            <ComboBox fx:id="yearComboBox" promptText="Year" styleClass="combo-green"/>
+                            <Button fx:id="generateReportBtn" text="Generate Report" styleClass="button-blue" prefHeight="10" prefWidth="160"/>
+                        </HBox>
+                    </VBox>
+                </content>
+            </Tab>
+            <Tab text="Top Extenders">
+                <content>
+                    <VBox alignment="TOP_CENTER" spacing="20.0">
+                        <HBox alignment="CENTER" spacing="10">
+                            <Label text="Top Extenders (Most Extensions)" styleClass="text-title"/>
+                        </HBox>
+                        <TableView fx:id="topExtendersTable" prefHeight="350.0" prefWidth="700.0" />
+                        <HBox alignment="CENTER" spacing="10">
+                            <Label text="Month:" styleClass="text-subtitle" style="-fx-font-size: 18px;"/>
+                            <ComboBox fx:id="extendersMonthComboBox" promptText="Month" styleClass="combo-green"/>
+                            <Label text="Year:" styleClass="text-subtitle" style="-fx-font-size: 18px;"/>
+                            <ComboBox fx:id="extendersYearComboBox" promptText="Year" styleClass="combo-green"/>
+                            <Button fx:id="generateExtendersReportBtn" text="Generate Report" styleClass="button-blue" prefHeight="10" prefWidth="160"/>
+                        </HBox>
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+</AnchorPane> 

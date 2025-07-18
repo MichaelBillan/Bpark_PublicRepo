@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="bparkClient.gui.verifyViaTagController"
+      alignment="TOP_CENTER"
+      spacing="20.0"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      stylesheets="@/bparkClient/style/verifyViaTag.css"
+      prefWidth="450" prefHeight="650">
+
+    <!-- מרווח כללי למסך -->
+    <padding>
+        <Insets bottom="50" left="30" right="30" top="30"/>
+    </padding>
+
+
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <padding>
+            <Insets top="10" left="10" right="10" bottom="10"/>
+        </padding>
+    		<!-- כפתורי בית וחזור למעלה בצד שמאל -->
+    		<HBox alignment="TOP_LEFT" spacing="10">
+        		<Button fx:id="backverifysuboptions"
+                		onAction="#handlebackverifysuboptions"
+                		prefHeight="40"
+                		prefWidth="90"
+                		styleClass="back-button"
+                		text="Back"/>
+
+        		<Button fx:id="homewelcometerminal"
+                		onAction="#handlehomewelcometerminal"
+                		prefHeight="40"
+                		prefWidth="90"
+                		styleClass="back-button"
+                		text="Home"/>
+     		</HBox>
+     	</HBox>
+
+    <!-- כותרת -->
+    <Label text="Verify Your Subscription" styleClass="text-title"/>
+
+    <!-- אייקון של ווי-פיי -->
+    <ImageView fitHeight="150" fitWidth="150">
+        <image>
+            <Image url="@/images/wifiIconNON.png"/>
+        </image>
+    </ImageView>
+
+    <!-- כפתור Place a Tag -->
+    <Button fx:id="placeatagbtn"
+            onAction="#handleplaceatagbtn"
+            prefWidth="200"
+            text="Place a Tag"
+            styleClass="button-blue"/>
+</VBox>

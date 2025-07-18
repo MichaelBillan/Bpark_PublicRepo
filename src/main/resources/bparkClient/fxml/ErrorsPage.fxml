@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bparkClient.gui.ErrorScreenController"
+            stylesheets="@/bparkClient/style/failed.css"
+            prefHeight="650" prefWidth="450">
+
+    <children>
+
+        <!-- כפתור חזרה בצד שמאל למעלה -->
+        <HBox alignment="TOP_LEFT" spacing="10"
+              AnchorPane.topAnchor="60" AnchorPane.leftAnchor="20">
+            <Button fx:id="btnBack"
+                    onAction="#handleBack"
+                    text="Back"
+                    styleClass="back-button"
+                    prefWidth="80" prefHeight="30"/>
+        </HBox>
+
+        <!-- התוכן המרכזי -->
+        <VBox alignment="TOP_CENTER" spacing="20"
+              AnchorPane.topAnchor="170" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+            
+            <Label text="Something went wrong..." styleClass="error-title"/>
+
+            <Label text="Sorry, but the code you tried to enter is invalid"
+                   id="textError1"
+                   wrapText="true"
+                   styleClass="label-subtitle"/>
+
+            <Label text="Please try again" styleClass="label-subtitle"/>
+
+        </VBox>
+    </children>
+</AnchorPane>

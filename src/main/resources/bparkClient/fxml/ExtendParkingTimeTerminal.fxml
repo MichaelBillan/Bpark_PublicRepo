@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bparkClient.gui.ExtendParkingTimeTerminalController"
+            stylesheets="@/bparkClient/style/parkingInfo.css"
+            prefWidth="450" prefHeight="650">
+
+    <!-- כפתורי בית וחזור בצד שמאל למעלה -->
+    <HBox spacing="10" AnchorPane.topAnchor="50" AnchorPane.leftAnchor="20">
+        <Button fx:id="backparkinginfo"
+                onAction="#handlebackparkinginfo"
+                prefHeight="36" prefWidth="90"
+                styleClass="back-button"
+                text="Back"/>
+
+        <Button fx:id="homewelcometerminal"
+                onAction="#handlehomewelcometerminal"
+                prefHeight="36" prefWidth="90"
+                styleClass="back-button"
+                text="Home"/>
+    </HBox>
+
+    <!-- תוכן מרכזי ממורכז -->
+    <VBox alignment="CENTER" spacing="25"
+          AnchorPane.topAnchor="200" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+        
+        <Label text="Extend Parking Time" styleClass="text-title"/>
+
+        <GridPane hgap="10" vgap="15">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="New Exit Time:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0"
+                   styleClass="text-subtitle"
+                   style="-fx-font-size: 16px;"/>
+
+                   
+
+            <ComboBox fx:id="newExitTimeComboBox"
+                      promptText="Select hours"
+                      GridPane.columnIndex="1" GridPane.rowIndex="0"
+                      styleClass="combo-green"/>
+
+            <Label fx:id="errorLabel"
+                   text=""
+                   wrapText="true"
+                   maxWidth="200"
+                   minHeight="20"
+                   textFill="red"
+                   styleClass="text-error"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints prefHeight="30"/>
+            </rowConstraints>
+        </GridPane>
+
+        <Button fx:id="extendtimebtn"
+                onAction="#handleextendtimebtn"
+                text="Extend Time"
+                styleClass="button-green"
+                prefWidth="200"/>
+    </VBox>
+</AnchorPane>

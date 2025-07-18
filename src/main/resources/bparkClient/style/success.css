@@ -1,0 +1,84 @@
+
+.root {
+    -fx-background-image: url("/images/background_verifySuccess.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.content-box {
+    -fx-padding: 30 40 40 40;
+    -fx-pref-height: 900;
+    -fx-spacing: 30;
+}
+
+.label-subtitle-bold {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+
+.center-content {
+    -fx-translate-y: -50;
+}
+
+.logo-bar {
+    -fx-padding: 10 20 0 0;
+}
+
+.logo-bubble {
+    -fx-background-color: #3daeff;
+    -fx-background-radius: 30;
+    -fx-padding: 6 20 6 20;
+}
+
+.logo-text {
+    -fx-font-size: 20;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.text-title {
+    -fx-font-size: 28;
+    -fx-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.label-subtitle {
+    -fx-font-size: 16;
+    -fx-text-fill: #555555;
+}
+
+.button-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+}
+
+.button-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+}
+
+.back-button-bar-lower {
+    -fx-padding: 0 0 120 20; /* bottom padding pushes up a bit */
+    -fx-alignment: BOTTOM_LEFT;
+}
+
+.back-button {
+    -fx-font-size: 20;
+    -fx-text-fill: #2196F3;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+
+.back-button:hover {
+    -fx-underline: true;
+}

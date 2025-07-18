@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="550" prefWidth="650"
+            fx:controller="bparkClient.gui.ParkingHistoryController"
+            stylesheets="@/bparkClient/style/verifyViaTag.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1">
+    
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="15.0"
+              AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="70" />
+            </padding>
+
+            <Label text="Parking History" styleClass="text-title" />
+
+            <TableView fx:id="parkingHistoryTable" prefHeight="300.0" prefWidth="620" styleClass="custom-table">
+                <columns>
+                    <TableColumn fx:id="spaceIdCol" prefWidth="100.0" text="Space ID" />
+                    <TableColumn fx:id="dateCol" prefWidth="100.0" text="Date" />
+                    <TableColumn fx:id="startTimeCol" prefWidth="110.0" text="Start Time" />
+                    <TableColumn fx:id="durationCol" prefWidth="113.0" text="Duration" />
+                    <TableColumn fx:id="codeCol" prefWidth="137.0" text="Parking Code" />
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER" spacing="20.0">
+                <Button fx:id="backsubscriberdetailsbtn" onAction="#handlebacksubscriberdetailsbtn"
+                        prefHeight="54.0" prefWidth="90"
+                        styleClass="back-button"
+                        text="Back" />
+
+                <Button fx:id="homewelcomeweb" onAction="#handlehomewelcomeweb"
+                        alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false"
+                        prefHeight="44.0" prefWidth="90"
+                        styleClass="back-button"
+                        text="Home" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

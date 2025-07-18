@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="bparkClient.gui.RoleSelectionTerminalController"
+           stylesheets="@/bparkClient/style/RoleSelectionTerminalOrWeb.css"
+           styleClass="root"
+           prefWidth="450" prefHeight="650">
+
+    <!-- תוכן מרכזי באמצע -->
+    <VBox alignment="CENTER"
+          spacing="15"
+          styleClass="center-content"
+          StackPane.alignment="CENTER">
+        <Label text="Welcome!" styleClass="text-title"/>
+        <Button fx:id="checkparkingavailabilitybtn"
+                onAction="#handlecheckparkingavailabilitybtn"
+                prefWidth="250"
+                text="Check Parking Availability"
+                styleClass="button-green"/>
+        <Button fx:id="subscriberterminalbtn"
+                onAction="#handlesubscriberterminalbtn"
+                prefWidth="250"
+                text="Subscriber"
+                styleClass="button-green"/>
+    </VBox>
+
+    <!-- כפתורי חזור ובית למעלה - עברו לסוף כדי שיהיו בשכבה העליונה -->
+    <HBox alignment="TOP_LEFT"
+          StackPane.alignment="TOP_LEFT"
+          spacing="10"
+          pickOnBounds="false"> <!-- ✅ לא יתפס מקום שלא שייך לכפתורים -->
+        <padding>
+            <Insets top="70" right="20" bottom="0" left="20"/>
+        </padding>
+        <Button fx:id="backAccessSelectionBtn"
+                onAction="#handlebackAccessSelectionBtn"
+                prefHeight="30"
+                prefWidth="90"
+                styleClass="back-button"
+                text="Back"/>
+        <Button fx:id="homeAccessSelectionBtn"
+                onAction="#handlehomeAccessSelectionBtn"
+                prefHeight="30"
+                prefWidth="90"
+                styleClass="back-button"
+                text="Home"/>
+    </HBox>
+
+</StackPane>

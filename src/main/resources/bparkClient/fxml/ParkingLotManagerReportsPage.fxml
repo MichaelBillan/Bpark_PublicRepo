@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650" prefWidth="450"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bparkClient.gui.ParkingLotManagerReportsController"
+            stylesheets="@/bparkClient/style/parkingAvailability.css">
+
+    <children>
+        <!-- כפתורי חזור ובית בצד שמאל למעלה -->
+        <HBox alignment="TOP_LEFT" spacing="10"
+              AnchorPane.topAnchor="80" AnchorPane.leftAnchor="20.0">
+            <Button fx:id="backBtn"
+                    onAction="#handleBack"
+                    text="Back"
+                    styleClass="back-button"
+                    prefHeight="30" prefWidth="80"/>
+            <Button fx:id="homeBtn"
+                    onAction="#handleHome"
+                    text="Home"
+                    styleClass="back-button"
+                    prefHeight="30" prefWidth="90"/>
+        </HBox>
+
+        <!-- תיבת התוכן המרכזית -->
+        <VBox alignment="TOP_CENTER" spacing="20.0"
+              AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150">
+            <children>
+                <Label text="Reports" styleClass="text-title">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+
+                <Button text="Parking Times Report" onAction="#handleParkingTimesReport" styleClass="button-blue" prefHeight="30" prefWidth="200"/>
+
+                <Button text="Top Users Report" onAction="#handleTopUsersReport" styleClass="button-green" prefHeight="30" prefWidth="200"/>
+
+                <Button fx:id="lateParkingReportBtn"
+                        text="Late Parking Report"
+                        onAction="#handleLateParkingReportBtn"
+                        styleClass="button-blue" />
+            </children>
+
+            <padding>
+                <Insets top="10" bottom="20" left="20" right="20"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
+

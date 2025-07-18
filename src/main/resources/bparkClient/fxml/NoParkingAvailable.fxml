@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bparkClient.gui.NoParkingAvailableController"
+            stylesheets="@/bparkClient/style/failed.css"
+            prefWidth="450" prefHeight="650">
+
+    <!-- כפתורי Back ו-Home בצד שמאל למעלה -->
+    <HBox spacing="10" AnchorPane.topAnchor="70" AnchorPane.leftAnchor="20">
+        <Button fx:id="backdropofforpickupterminal"
+                onAction="#handlebackdropofforpickupterminal"
+                prefHeight="36" prefWidth="90"
+                styleClass="back-button"
+                text="Back"/>
+        <Button fx:id="homewelcometerminal"
+                onAction="#handlehomewelcometerminal"
+                prefHeight="36" prefWidth="90"
+                styleClass="back-button"
+                text="Home"/>
+    </HBox>
+
+    <!-- התוכן המרכזי -->
+    <VBox alignment="CENTER" spacing="20"
+          AnchorPane.topAnchor="150" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+        <Label text="No Parking Spaces Available!" styleClass="text-title"/>
+        <Label text="Currently there are no available parking spaces." styleClass="text-body" style="-fx-font-size: 16px;" />
+        <Label text="Please try again later or make a reservation in advance." styleClass="text-body" style="-fx-font-size: 16px;" />
+
+    </VBox>
+</AnchorPane>

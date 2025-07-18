@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:controller="bparkClient.gui.EntersubscriptioncodeTerminalController"
+           xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           stylesheets="@/bparkClient/style/verifyViaCode.css"
+           prefWidth="400" prefHeight="650">
+
+    <!-- כל התוכן שלך -->
+    <VBox fx:id="mainContent" alignment="TOP_LEFT" spacing="10">
+
+        <!-- כפתורי בית וחזור -->
+        <HBox alignment="TOP_LEFT" spacing="10">
+            <padding>
+                <Insets top="70" left="20"/>
+            </padding>
+            <Button fx:id="backverifysuboptions"
+                    onAction="#handlebackverifysuboptions"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Back"/>
+
+            <Button fx:id="homewelcometerminal"
+                    onAction="#handlehomewelcometerminal"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Home"/>
+        </HBox>
+
+        <!-- תוכן מרכזי -->
+        <VBox alignment="CENTER" maxWidth="400" spacing="20">
+            <padding>
+                <Insets bottom="40" left="30" right="30" top="40"/>
+            </padding>
+
+            <Label text="Verify Your Subscription" styleClass="text-title"/>
+
+            <GridPane hgap="10" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints halignment="RIGHT"/>
+                    <ColumnConstraints halignment="LEFT" hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <Label text="Subscription Code:"
+                       GridPane.columnIndex="0" GridPane.rowIndex="0"
+                       styleClass="label-subtitle"/>
+
+                <TextField fx:id="subscriptionCodeFieldterminal"
+                           promptText="Enter code..."
+                           styleClass="text-field"
+                           GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label fx:id="errorLabel"
+                       id="textError1"
+                       text="Invalid code"
+                       styleClass="error-text"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </GridPane>
+
+            <Button fx:id="verifysubcodebtn"
+                    onAction="#handleverifysubcodebtn"
+                    text="Verify"
+                    styleClass="button-blue"/>
+        </VBox>
+    </VBox>
+
+    <!-- שכבת טעינה -->
+    <VBox fx:id="loadingOverlay"
+          alignment="CENTER"
+          spacing="10"
+          visible="false"
+          style="-fx-background-color: rgba(0,0,0,0.3);"
+          StackPane.alignment="CENTER">
+        <children>
+            <ProgressIndicator />
+            <Label text="Loading..." style="-fx-text-fill: white; -fx-font-size: 18px;" />
+        </children>
+    </VBox>
+
+</StackPane>

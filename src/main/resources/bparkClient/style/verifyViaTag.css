@@ -1,0 +1,147 @@
+
+.root {
+    -fx-background-image: url("/images/background_onlyLOGOBest.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.content-box {
+    -fx-padding: 30 40 40 40;
+    -fx-pref-height: 900;
+    -fx-spacing: 30;
+}
+
+.center-content {
+    -fx-translate-y: -50;
+}
+
+.logo-bar {
+    -fx-padding: 10 20 0 0;
+}
+
+.logo-bubble {
+    -fx-background-color: #3daeff;
+    -fx-background-radius: 30;
+    -fx-padding: 6 20 6 20;
+}
+
+.logo-text {
+    -fx-font-size: 20;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+.text-title {
+    -fx-font-size: 28;
+    -fx-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.label-subtitle {
+    -fx-font-size: 16;
+    -fx-text-fill: #555555;
+}
+
+.button-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+}
+
+.button-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+}
+
+.back-button-bar-lower {
+    -fx-padding: 0 0 120 20; /* bottom padding pushes up a bit */
+    -fx-alignment: BOTTOM_LEFT;
+}
+
+.back-button {
+    -fx-font-size: 20;
+    -fx-text-fill: #2196F3;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+
+.back-button:hover {
+    -fx-underline: true;
+}
+
+.table-view.custom-table {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #64b5f6;
+    -fx-border-width: 2;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(100,181,246,0.3), 10, 0.2, 0, 3);
+    -fx-table-cell-border-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.table-view.custom-table .column-header-background {
+    -fx-background-color: #e3f2fd;
+}
+
+.table-view.custom-table .column-header, 
+.table-view.custom-table .table-row-cell {
+    -fx-alignment: CENTER;
+}
+
+.table-view.custom-table .table-row-cell:empty {
+    -fx-opacity: 0.4;
+    -fx-font-style: italic;
+}
+
+/* עיצוב כללי לטאב־פיין */
+.tab-pane {
+    -fx-background-color: #f2f6fc; /* רקע בהיר */
+    -fx-border-color: #c3d2e4;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+/* עיצוב טאב בודד */
+.tab {
+    -fx-background-insets: 0;
+    -fx-padding: 8 15 8 15;
+    -fx-background-radius: 8 8 0 0;
+    -fx-background-color: linear-gradient(to bottom, #e1ecf9, #c9d9ee);
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2a4e82;
+}
+
+/* טאב נבחר */
+.tab:selected {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #dce9f8);
+    -fx-text-fill: #1a3e66;
+    -fx-border-color: #5b94d9;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* גוף התוכן של הטאב */
+.tab-content-area {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15;
+    -fx-border-color: #c3d2e4;
+    -fx-border-width: 1;
+    -fx-border-radius: 0 0 8 8;
+}
+
+
+.combo-green {
+    -fx-background-color: white;
+	-fx-border-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+}
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<GridPane xmlns="http://javafx.com/javafx/21"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="bparkClient.gui.SeatGridController"
+          hgap="10" vgap="10" padding="20">
+
+    <!-- שורות של כפתורים -->
+    <!-- שורה ראשונה -->
+    <Button text="1" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="btn-taken"/>
+    <Button text="2" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="btn-taken"/>
+    <Button text="3" GridPane.rowIndex="0" GridPane.columnIndex="2" styleClass="btn-taken"/>
+    <Button text="4" GridPane.rowIndex="0" GridPane.columnIndex="3" styleClass="btn-taken"/>
+    <Button text="5" GridPane.rowIndex="0" GridPane.columnIndex="4" styleClass="btn-available"/>
+    <Button text="6" GridPane.rowIndex="0" GridPane.columnIndex="5" styleClass="btn-available"/>
+    <Button text="7" GridPane.rowIndex="0" GridPane.columnIndex="6" styleClass="btn-available"/>
+    <Button text="8" GridPane.rowIndex="0" GridPane.columnIndex="7" styleClass="btn-available"/>
+    <Button text="9" GridPane.rowIndex="0" GridPane.columnIndex="8" styleClass="btn-available"/>
+    <Button text="10" GridPane.rowIndex="0" GridPane.columnIndex="9" styleClass="btn-available"/>
+
+    <!-- שורה שנייה -->
+    <Button text="11" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="btn-available"/>
+    <Button text="12" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="btn-available"/>
+    <Button text="13" GridPane.rowIndex="1" GridPane.columnIndex="2" styleClass="btn-available"/>
+    <Button text="14" GridPane.rowIndex="1" GridPane.columnIndex="3" styleClass="btn-taken"/>
+    <!-- המשך עד 100... -->
+
+</GridPane>
+

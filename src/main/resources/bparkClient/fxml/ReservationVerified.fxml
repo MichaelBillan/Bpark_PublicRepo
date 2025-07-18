@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bparkClient.gui.ReservationVerifiedController"
+            stylesheets="@/bparkClient/style/success.css"
+            prefWidth="450" prefHeight="650">
+
+    <children>
+
+        <HBox spacing="10" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="20">
+            <Button fx:id="backenterconfirmationcode"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Back"
+                    onAction="#handlebackenterconfirmationcode"/>
+
+
+            <Button fx:id="homewelcometerminal"
+                    prefHeight="36" prefWidth="90"
+                    styleClass="back-button"
+                    text="Home"
+                    onAction="#handlehomewelcometerminal"/>
+        </HBox>
+
+        <VBox alignment="CENTER" 
+              spacing="20.0"
+              AnchorPane.topAnchor="120" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+            
+            <Label text="Reservation Verified!" styleClass="text-title"/>
+            <Label text="Your Parking Code:" styleClass="label-subtitle"/>
+    		<Label fx:id="parkingCodeLabel" styleClass="text-parking-code"/>
+            
+		</VBox>
+		
+		<VBox alignment="CENTER" spacing="15.0" AnchorPane.bottomAnchor="150" AnchorPane.leftAnchor="30"
+      AnchorPane.rightAnchor="30">
+    		<Label text="Your vehicle is being directed to the designated parking space." styleClass="text-body"/>
+    		<Label text="Please place the vehicle on the conveyor belt as instructed." styleClass="text-body"/>
+		</VBox>
+
+
+    </children>
+</AnchorPane>

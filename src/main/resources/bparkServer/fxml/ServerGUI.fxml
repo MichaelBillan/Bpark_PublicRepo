@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="bparkServer.gui.ServerGUIController" prefHeight="400.0" prefWidth="600.0"
+      stylesheets="@/bparkServer/style/ServerGUI.css">
+
+   <children>
+      <Label layoutX="225.0" layoutY="30.0" text="Start Server" textFill="#ffffff">
+         <font>
+            <Font name="Calibri Light" size="24.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="225.0" layoutY="60.0" text="Enter Port To Listen" textFill="#cccccc">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+
+      <TextField fx:id="portxt" layoutX="200.0" layoutY="90.0" prefWidth="200.0" promptText="Enter Port" />
+
+      <Button fx:id="btnDone" layoutX="250.0" layoutY="140.0" prefWidth="100.0" text="Listen" onAction="#Done" />
+
+      <Button fx:id="btnLoadSchema" layoutX="10.0" layoutY="10.0" prefWidth="140.0" text="Load DB Schema" onAction="#handleLoadSchema" />
+
+      <Label fx:id="statusLabel"
+       layoutX="100.0" layoutY="180.0" prefWidth="400.0"
+       alignment="CENTER_LEFT"
+       text="Server Status: Ready"
+       styleClass="status-label" />
+
+
+      <TableView fx:id="tblClients" layoutX="100.0" layoutY="200.0" prefHeight="150.0" prefWidth="400.0">
+         <columns>
+            <TableColumn fx:id="clmHN" text="Host Name" prefWidth="130.0"/>
+            <TableColumn fx:id="clmIP" text="IP Address" prefWidth="130.0"/>
+            <TableColumn fx:id="clmCs" text="Status" prefWidth="130.0"/>
+         </columns>
+      </TableView>
+
+      <Button fx:id="btnExit" layoutX="250.0" layoutY="370.0" prefWidth="100.0" text="Exit" onAction="#exit" />
+   </children>
+</Pane>

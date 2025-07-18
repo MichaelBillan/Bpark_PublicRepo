@@ -1,0 +1,36 @@
+.root {
+    -fx-background-color: #2f2f2f; 
+}
+
+.label, .text {
+    -fx-text-fill: #f0f0f0; 
+}
+
+.button {
+    -fx-background-color: #5a9bd5; 
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0, 2, 2);
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #407ec9;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 8, 0, 4, 4);
+}
+
+.button:pressed {
+    -fx-background-color: #6cb4ee;
+}
+
+.text-field {
+    -fx-background-color: #404040;
+    -fx-background-radius: 10;
+    -fx-border-color: #666666;
+    -fx-border-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-family: "Calibri";
+}

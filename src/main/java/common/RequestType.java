@@ -1,0 +1,54 @@
+package common;
+
+/**
+ * Represents all the possible types of requests sent between the client and server in the system.
+ * <p>
+ * This enum is used **instead of raw strings** to ensure type safety and avoid potential issues
+ * related to string mismatches or typos when specifying request types.
+ * </p>
+ * Each constant defines a specific type of action or query that can be handled by the server.
+ */
+public enum RequestType {
+    START_SESSION,
+    EXTEND_SESSION,
+    END_SESSION,
+    GET_AVAILABLE_SPOT_ID,
+    GET_AVAILABLE_SPOT_ID_NONRESERVED,
+    GET_AVAILABLE_SPOTS,
+    MARK_SPOT_OCCUPIED,
+    LOGIN,
+    LOGOUT,
+    REGISTER_SUBSCRIBER,
+    GET_SUBSCRIBER_BY_ID,
+    UPDATE_SUBSCRIBER_PHONE,
+    UPDATE_SUBSCRIBER_EMAIL,
+    GET_DURATION_FOR_SESSION,
+    GET_PARKING_SESSION_HISTORY,
+    GET_RESERVATION_HISTORY,
+    GET_ALL_SUBSCRIBERS,
+    GET_ACTIVE_SESSIONS,
+    GET_LATE_SESSIONS,
+    GET_SESSION_BY_PARKING_CODE,
+    GET_RESERVED_SPOTS_COUNT,
+    UPDATE_RESERVATION_STATUS_CONFIRMED,
+    DISCONNECT,
+    RELEASE_SPOT,
+    RESERVE_SPOT,
+    CREATE_RESERVATION,
+    GET_RESERVATION_BY_CODE,
+    CANCEL_RESERVATION,
+    VALIDATE_PARKING_CODE,
+    SCAN_VIA_TAG,
+    CHECK_SUBSCRIBER_CODE,
+    HAS_RESERVATION,
+    SEND_PARKING_CODE_VIA_EMAIL,
+    GET_PARKING_CODE_BY_SUBSCRIBER_ID,
+    GENERATE_SESSION_DURATION_DISTRIBUTION,
+    GENERATE_PEAK_USAGE_TIMES,
+    GENERATE_SPOT_UTILIZATION,
+    GENERATE_SUBSCRIBER_REPORT,
+    GENERATE_TOP_EXTENDERS_REPORT,
+    GENERATE_LATE_PARKING_REPORT,
+    GET_TOP_USERS_FOR_MONTH,
+    GET_CURRENT_PICKUP_TIME
+}

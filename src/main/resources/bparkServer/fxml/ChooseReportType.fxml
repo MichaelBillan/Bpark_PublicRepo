@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="TimesReportBTN" layoutX="230.0" layoutY="107.0" minWidth="140.0" mnemonicParsing="false" text="Parking Times Report" />
+      <Button fx:id="SubscriberStatusBTN" layoutX="226.0" layoutY="161.0" minWidth="140.0" mnemonicParsing="false" text="Subscriber Status Report" />
+      <Label layoutX="242.0" layoutY="32.0" text="Reports">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+      </Label>
+      <HBox layoutX="221.0" layoutY="206.0" prefHeight="51.0" prefWidth="158.0">
+         <children>
+            <Button fx:id="backtowelcometerminal" prefHeight="54.0" prefWidth="56.0" style="-fx-background-color: transperant; -fx-text-fill: #1C3F7A;" text="&lt;">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="51.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/WhatsApp%20Image%202025-06-13%20at%2016.33.29.jpeg" />
+               </image>
+            </ImageView>
+            <Button fx:id="homewelcometerminal" alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="56.0" style="-fx-background-color: transperant; -fx-text-fill: #1C3F7A;" text="🏠 ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

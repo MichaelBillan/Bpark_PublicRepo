@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650" prefWidth="450"
+            stylesheets="@/bparkClient/style/AccessSelection.css"
+            fx:controller="bparkClient.gui.LostCodeWebController"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+
+        <!-- כפתורי חזור ובית למעלה בצד שמאל -->
+        <HBox alignment="TOP_LEFT" spacing="10.0"
+              AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60">
+            <Button fx:id="backenterparkingcodebtn"
+                    onAction="#handlebackenterparkingcodebtn"
+                    prefHeight="30.0" prefWidth="90.0"
+                    text="Back"
+                    styleClass="back-button">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Button>
+
+            <Button fx:id="homewelcometerminal"
+                    onAction="#handlehomewelcometerminal"
+                    prefHeight="30.0" prefWidth="90.0"
+                    text="Home"
+                    styleClass="back-button">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Button>
+        </HBox>
+
+        <!-- תוכן מרכזי -->
+        <VBox alignment="CENTER" spacing="20.0"
+              AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="200">
+            <padding>
+                <Insets top="20" bottom="20" left="20" right="20" />
+            </padding>
+
+            <children>
+                <Label styleClass="header-label"
+                       style="-fx-font-size: 18px;"
+                       text="How Would You Like to Receive Your Code?" />
+
+                <Button fx:id="sendparkingcodeviaemailbtn"
+                        onAction="#handlesendparkingcodeviaemailbtn"
+                        styleClass="button-green"
+                        prefWidth="220"
+                        text="Send via Email" />
+
+                <Button fx:id="sendparkingcodeviasmsbtn"
+                        onAction="#handlesendparkingcodeviasmsbtn"
+                        styleClass="button-green"
+                        prefWidth="220"
+                        text="Send via SMS" />
+
+                <Label fx:id="feedbackLabel"
+                       text=""
+                       visible="false"
+                       style="-fx-text-fill: green; -fx-font-size: 13px;" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

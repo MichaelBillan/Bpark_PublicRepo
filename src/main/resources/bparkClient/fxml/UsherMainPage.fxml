@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="bparkClient.gui.UsherGUIController"
+            stylesheets="@/bparkClient/style/AccessSelection.css"
+            prefHeight="650" prefWidth="450"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- כפתורי חזור ובית למעלה משמאל -->
+    <HBox spacing="10" AnchorPane.topAnchor="30.0" AnchorPane.leftAnchor="20.0">
+        <Button fx:id="backBtn"
+                prefHeight="30.0" prefWidth="90"
+                onAction="#handleBack"
+                text="Back" styleClass="back-button" />
+
+        <Button fx:id="homeBtn"
+                onAction="#handlehomeBtn"
+                prefHeight="30.0" prefWidth="90"
+                text="Home" styleClass="back-button" />
+    </HBox>
+
+    <!-- תוכן מרכזי באמצע -->
+    <VBox spacing="20"
+          alignment="CENTER"
+          AnchorPane.topAnchor="200"
+          AnchorPane.leftAnchor="30.0"
+          AnchorPane.rightAnchor="30.0">
+        
+        <Label text="Welcome, Usher" styleClass="text-title" />
+
+        <Button fx:id="registBT"
+                onAction="#handleRegisterNewSubscriber"
+                prefHeight="40.0" prefWidth="250.0"
+                text="Register New Subscriber"
+                styleClass="button-green" />
+
+        <Button fx:id="ViewSubscribeDetailsBT"
+                onAction="#handleShowAllSubscribers"
+                prefHeight="40.0" prefWidth="250.0"
+                text="Show All Subscribers"
+                styleClass="button-blue" />
+
+        <Button fx:id="ViewActiveParkingBT"
+                onAction="#handleViewActiveParkingDetails"
+                prefHeight="40.0" prefWidth="250.0"
+                text="View Active Parking Details"
+                styleClass="button-green" />
+
+    </VBox>
+</AnchorPane>

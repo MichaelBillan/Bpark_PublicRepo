@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane prefHeight="550" prefWidth="600"
+            stylesheets="@/bparkClient/style/verifyViaTag.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bparkClient.gui.ActiveParkingDetailsUsherController">
+
+    <children>
+        <HBox layoutX="0.0" layoutY="100" prefWidth="600.0" alignment="CENTER">
+    		<children>
+        		<Label text="Active Parking Details" styleClass="text-title"/>
+    		</children>
+		</HBox>
+
+              
+        <TableView fx:id="activeParkingTable"
+                   layoutX="50.0" layoutY="150"
+                   prefHeight="250" prefWidth="550.0"
+                   styleClass="custom-table">
+            <columns>
+                <TableColumn fx:id="parkingCodeCol" prefWidth="130" text="Parking Code" />
+                <TableColumn fx:id="subscriberIdCol" prefWidth="100.0" text="Subscriber ID" />
+                <TableColumn fx:id="startTimeCol" prefWidth="140.0" text="Start Time" />
+                <TableColumn fx:id="durationCol" prefWidth="80.0" text="Duration" />
+                <TableColumn fx:id="extendedCol" prefWidth="70" text="Extended" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="backBtn"
+                layoutX="166.0" layoutY="400"
+                minWidth="70.0" mnemonicParsing="false"
+                onAction="#handleBack"
+                text="Back" 
+                styleClass="back-button"/>
+
+        <Button fx:id="homeBtn"
+                layoutX="374.0" layoutY="400"
+                prefHeight="44.0" prefWidth="90"
+                text="Home"
+                onAction="#handleHome"
+                styleClass="back-button">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

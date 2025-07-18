@@ -1,0 +1,311 @@
+.root {
+    -fx-background-color: #2b2b2b;
+}
+
+
+.text-title {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Calibri";
+}
+
+.text-subtitle {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 14px;
+    -fx-font-family: "Calibri";
+}
+
+
+
+.label-subtitle {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 16px;
+}
+
+
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #3d3d3d;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 2, 2);
+    -fx-font-family: "Calibri";
+}
+
+.button:hover {
+    -fx-background-color: #505050;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+}
+
+.button:pressed {
+    -fx-background-color: #606060;
+}
+
+
+.text-field {
+    -fx-background-color: #3a3a3a;
+    -fx-background-radius: 10;
+    -fx-border-color: #555555;
+    -fx-border-radius: 10;
+    -fx-text-fill: #f0f0f0;
+    -fx-font-family: "Calibri";
+}
+
+
+.table-view {
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: #444444;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #3d3d3d;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header:hover {
+    -fx-background-color: #505050;
+}
+
+.table-view .table-column {
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #f5f5dc;
+    -fx-font-size: 20px;
+    -fx-font-family: "Calibri";
+}
+
+.icon-button:hover {
+    -fx-text-fill: #fff5cc;
+    -fx-cursor: hand;
+}
+
+.icon-button:pressed {
+    -fx-text-fill: #e6ddb8;
+}
+
+.hyperlink {
+    -fx-text-fill: #1C3F7A;
+    -fx-font-size: 14px;
+    -fx-font-family: "Calibri";
+}
+.hyperlink:hover {
+    -fx-underline: true;
+    -fx-text-fill: #3973c4;
+}
+
+.error-title {
+    -fx-text-fill: #ff4c4c;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.combo-box {
+    -fx-background-radius: 10;
+    -fx-background-color: #404040;
+    -fx-border-color: #666666;
+    -fx-text-fill: white;
+    -fx-font-family: "Calibri";
+}
+
+.table-view .table-cell {
+    -fx-text-fill: black;
+}
+
+.table-view .label {
+    -fx-text-fill: white;
+}
+
+#textError1, #textError2 {
+    -fx-text-fill: #e63946;
+    -fx-font-size: 16px;
+    -fx-font-family: "Calibri";
+}
+
+.combo-box {
+    -fx-font-size: 14px;
+    -fx-background-color: #333;
+    -fx-text-fill: white;
+}
+
+.pie-chart {
+    -fx-pie-label-visible: true;
+    -fx-background-color: transparent;
+}
+
+.chart-bar {
+    -fx-bar-fill: linear-gradient(#ff6600, #ff3300);
+}
+
+.chart-legend {
+    -fx-text-fill: white;
+}
+
+.axis-label, .chart-title {
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #555;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 6 12;
+}
+
+/* --- Graph Page Modern Styles --- */
+
+.chart-card {
+    -fx-background-color: #23272e;
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 16, 0.2, 0, 4);
+    -fx-padding: 30 40 30 40;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.logo-image {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0.2, 0, 2);
+}
+
+.pie-chart {
+    -fx-background-color: transparent;
+    -fx-pie-label-visible: true;
+    -fx-font-size: 16px;
+    -fx-font-family: "Calibri";
+}
+
+.pie-chart .chart-title {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.pie-chart .chart-legend {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+}
+
+.pie-chart .chart-pie {
+    -fx-pie-color: #4e8cff;
+}
+
+.pie-chart .chart-pie-label {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 15px;
+    -fx-font-family: "Calibri";
+    -fx-font-weight: bold;
+}
+
+.bar-chart {
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-font-family: "Calibri";
+}
+
+.bar-chart .chart-title {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.bar-chart .chart-legend {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 14px;
+}
+
+.bar-chart .chart-bar {
+    -fx-bar-fill: #ff7746;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.axis-label, .chart-title {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 16px;
+}
+
+.chart-legend {
+    -fx-text-fill: #e0e0e0;
+}
+
+.combo-box {
+    -fx-background-radius: 10;
+    -fx-background-color: #404040;
+    -fx-border-color: #666666;
+    -fx-text-fill: white;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 15px;
+    -fx-padding: 6 12;
+}
+
+.button {
+    -fx-background-color: #4e8cff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 18;
+    -fx-font-size: 15px;
+    -fx-font-family: "Calibri";
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 6, 0.2, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #1e3c72;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-cursor: hand;
+}
+
+/* --- Custom TabPane Styles --- */
+.tab-pane {
+    -fx-background-color: transparent;
+}
+.tab-pane .tab-header-area {
+    -fx-background-color: #23272e;
+    -fx-padding: 0 0 10 0;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #3d3d3d;
+}
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+.tab-pane .tab {
+    -fx-background-color: #3d3d3d;
+    -fx-text-fill: #f0f0f0;
+    -fx-font-size: 15px;
+    -fx-font-family: "Calibri";
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 6 18 6 18;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: transparent transparent #555555 transparent;
+}
+.tab-pane .tab:selected {
+    -fx-background-color: #555;
+    -fx-text-fill: #fff;
+    -fx-border-color: transparent transparent #1C3F7A transparent;
+    -fx-font-weight: bold;
+}
+.tab-pane .tab-label {
+    -fx-text-fill: inherit;
+}
+.tab-pane .tab-content-area {
+    -fx-background-color: #23272e;
+    -fx-padding: 20 20 20 20;
+    -fx-background-radius: 0 0 12 12;
+}

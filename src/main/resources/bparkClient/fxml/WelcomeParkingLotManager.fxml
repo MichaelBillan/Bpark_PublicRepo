@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@/bparkClient/style/AccessSelection.css"
+            fx:controller="bparkClient.gui.ParkingLotManagerGUIController"
+            prefHeight="650" prefWidth="450">
+
+    <!-- כפתורי חזור ובית למעלה משמאל -->
+    <HBox spacing="10" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="20.0">
+        <Button fx:id="backBtn"
+                prefHeight="30.0" prefWidth="90"
+                onAction="#handleBack"
+                text="Back" styleClass="back-button" />
+
+        <Button fx:id="homeBtn"
+                onAction="#handleHome"
+                prefHeight="30.0" prefWidth="90"
+                text="Home" styleClass="back-button" />
+    </HBox>
+
+    <VBox alignment="CENTER" spacing="20.0"
+          AnchorPane.topAnchor="120"
+          AnchorPane.leftAnchor="60.0"
+          AnchorPane.rightAnchor="60.0">
+
+        <!-- כותרות -->
+        <Label text="Welcome" styleClass="text-title"/>
+        <Label text="Parking Lot Manager" styleClass="text-title">
+            <font>
+                <Font size="20"/> <!-- ⬅️ הקטנת גודל כדי שיתאים לרוחב -->
+            </font>
+        </Label>
+
+        <!-- כפתורים עם רוחב אחיד -->
+        <Button fx:id="ViewSubscribeDetailsBT" text="Show All Subscribers"
+                styleClass="button-blue" onAction="#handleShowAllSubscribers"
+                prefWidth="240" />
+
+        <Button fx:id="viewParkingBtn" text="View Active Parking Details"
+                onAction="#handleViewActiveParkingDetails"
+                styleClass="button-green"
+                prefWidth="240" />
+
+        <Button fx:id="viewReportsBtn" text="View Reports"
+                onAction="#handleViewReports"
+                styleClass="button-blue"
+                prefWidth="240" />
+
+        <padding>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </padding>
+    </VBox>
+</AnchorPane>

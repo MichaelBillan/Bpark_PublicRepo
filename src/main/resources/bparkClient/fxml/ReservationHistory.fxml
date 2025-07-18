@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="550" prefWidth="700"
+            fx:controller="bparkClient.gui.ReservationHistoryController"
+            stylesheets="@/bparkClient/style/verifyViaTag.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="15.0"
+              AnchorPane.leftAnchor="20.0"
+              AnchorPane.rightAnchor="20.0"
+              AnchorPane.topAnchor="20.0">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="70" />
+            </padding>
+
+            <Label text="Reservation History" styleClass="text-title" />
+
+			<TableView fx:id="reservationTable"
+           			prefHeight="320.0" prefWidth="600.0"
+           			styleClass="custom-table">
+    			<columns>
+        			<TableColumn fx:id="resIdCol" prefWidth="80.0" text="Res ID" />
+        			<TableColumn fx:id="confirmationCodeCol" prefWidth="130.0" text="Confirmation Code" />
+        			<TableColumn fx:id="statusCol" prefWidth="90.0" text="Status" />
+        			<TableColumn fx:id="startCol" prefWidth="110.0" text="Start Time" />
+        			<TableColumn fx:id="endCol" prefWidth="110.0" text="End Time" />
+        			<TableColumn fx:id="spaceIdCol" prefWidth="80.0" text="Space ID" />
+    			</columns>
+			</TableView>
+
+
+
+            <HBox alignment="CENTER" spacing="20.0">
+                <Button fx:id="backsubscriberdetailsbtn"
+                        onAction="#handlebacksubscriberdetailsbtn"
+                        prefHeight="54.0" prefWidth="90"
+                        styleClass="back-button"
+                        text="Back" />
+
+                <Button fx:id="homewelcomeweb"
+                        onAction="#handlehomewelcomeweb"
+                        alignment="TOP_LEFT"
+                        contentDisplay="CENTER"
+                        mnemonicParsing="false"
+                        prefHeight="44.0" prefWidth="90"
+                        styleClass="back-button"
+                        text="Home" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

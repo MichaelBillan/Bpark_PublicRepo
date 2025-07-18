@@ -1,0 +1,81 @@
+
+.root {
+    -fx-background-image: url("/images/background_6cars.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.content-box {
+    -fx-padding: 40 30 30 30;
+    -fx-spacing: 30;
+}
+
+.center-content {
+    -fx-translate-y: -50;
+} 
+
+.text-title {
+    -fx-font-size: 28;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.label-subtitle {
+    -fx-font-size: 18;
+    -fx-text-fill: black;
+}
+
+.text-error {
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+}
+
+
+.button-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+}
+
+.button-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+}
+
+.back-button-bar-lower {
+    -fx-padding: 0 0 120 20; /* bottom padding pushes up a bit */
+    -fx-alignment: BOTTOM_LEFT;
+}
+
+.back-button {
+    -fx-font-size: 20;
+    -fx-text-fill: #2196F3;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+
+.back-button:hover {
+    -fx-underline: true;
+}
+
+.label-error {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+
+.combo-green {
+    -fx-background-color: white;
+	-fx-border-color: black;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+}
+

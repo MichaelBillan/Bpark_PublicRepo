@@ -91,7 +91,16 @@ The project was developed according to the Software Engineering Life Cycle (SELC
 - Project Type: Semester Group Project
 - Version: Phase 1 – Local Network Implementation
 
-## Michael Billan Role in the Project | Team Lead and Main Backend Developer
-- Designed system architecture
-- Implemented backend functionality
-- Created the database schema
+
+## Contributors
+
+### Michael Billan | Team Lead and Main Backend Developer
+- Designed the system architecture.
+- Implemented backend functionality.
+- Created and managed the database schema.
+
+
+## License
+This project was developed for academic and educational purposes under Braude College guidelines.  
+All rights reserved © Braude College, Software Engineering Department.
+

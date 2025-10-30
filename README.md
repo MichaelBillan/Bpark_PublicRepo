@@ -99,6 +99,14 @@ The project was developed according to the Software Engineering Life Cycle (SELC
 - Implemented backend functionality.
 - Created and managed the database schema.
 
+**Implemented Files and Modules:**
+```
+src/main/java/bparkClient/logic/..
+src/main/java/bparkServer/db/DataBaseController.java
+src/main/java/bparkServer/notifications/..
+src/main/java/bparkServer/scheduler/..
+src/main/java/common/entities/..
+```
 
 ## License
 This project was developed for academic and educational purposes under Braude College guidelines.  
